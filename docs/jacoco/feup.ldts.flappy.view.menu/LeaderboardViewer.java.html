@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>LeaderboardViewer.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">project-l04gr02</a> &gt; <a href="index.source.html" class="el_package">feup.ldts.flappy.view.menu</a> &gt; <span class="el_source">LeaderboardViewer.java</span></div><h1>LeaderboardViewer.java</h1><pre class="source lang-java linenums">package feup.ldts.flappy.view.menu;
+
+import feup.ldts.flappy.gui.GUI;
+import feup.ldts.flappy.model.game.Position;
+import feup.ldts.flappy.model.menu.Leaderboard;
+import feup.ldts.flappy.view.Colors;
+
+public class LeaderboardViewer extends MenuViewer&lt;Leaderboard&gt; {
+
+    public LeaderboardViewer(Leaderboard model) {
+<span class="fc" id="L11">        super(model, new Position(8, 13));</span>
+<span class="fc" id="L12">    }</span>
+
+    protected void drawInsideElements(GUI gui) {
+<span class="fc" id="L15">        drawTitle(gui, &quot;Leaderboard&quot;, Colors.WHITE.getHex());</span>
+
+<span class="fc bfc" id="L17" title="All 2 branches covered.">        for (int i = 0; i &lt; getModel().getSize(); i++) {</span>
+<span class="fc" id="L18">            drawText(gui, new Position(8, 13 + i), getModel().getLine(i), Colors.ORANGE.getHex());</span>
+        }
+<span class="fc" id="L20">    }</span>
+
+    @Override
+    public void drawOptions(GUI gui) {
+
+<span class="fc" id="L25">    }</span>
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
